@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+int main()
+{
+    int y,m;
+    int choice;
+    do{printf(
+    "\n1 To convert the entered Years into Minutes""\n"
+    "2 To convert the entered Years into Hours" "\n"
+    "3 To convert the entered Years into Days" "\n"
+    "4 To convert the entered Years into Months" "\n"
+    "5 To convert the entered Years into Seconds" "\n"
+    "6 To exit""\n");
+    
+    printf("Enter your choice");
+    scanf("%d",&choice);
+    printf("Enter year");
+    scanf("%d",&y);
+    switch(choice){
+        case 1: m=(y*365*60*24);
+               printf("\nTo convert the entered Years into Minutes:%d ",m);
+               break;
+       case 2: m=(y*365*24);
+       printf("\nTo convert the entered Years into Hours:%d", m);
+                break;
+       case 3: m=(y*365);
+       printf("\nTo convert the entered Years into Days:%d",m);
+               break;
+       case 4: m=y*12;
+       printf("\nTo convert the entered Years into Months:%d",m);
+               break;
+       case 5: m=y*365*60*60*24;
+       printf("\nTo convert the entered Years into Seconds:%d",m);
+               break;
+       case 6: printf("To exit\n");
+               break;     
+       default: printf("Choice wrong key\n");
+                break; 
+    }
+}while(6!=choice);
+    return 0;
+}
